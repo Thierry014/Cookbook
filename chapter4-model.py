@@ -16,5 +16,14 @@
 </menuitem>
 #? https://www.odoo.com/documentation/14.0/developer/howtos/rdtraining/06_firstui.html
 
+# view: ir.actions.act_window => display model UI 
+
 #todo groupby in search view
-# Adding Access Security
+# Adding Access Security (3 steps)
+        #? define res.group => update csv file => update manifest
+
+<record id="group_manager" model="res.groups">
+    <field name="name">Manager</field>
+    <field name="users" eval="[(4, ref('base.user_admin'))]"/>
+</record>
+# Give admin user => group_manager right
