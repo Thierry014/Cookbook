@@ -2,6 +2,14 @@
 
 # Todo LIst
 # name_get() => customize rec_name
+def name_get(self):
+    result = []
+    for record in self:
+        rec_name = f"{record.name}-({record.date_release})"
+        result.append((record.id, rec_name))
+    return result
+#? Book 2-(1992-04-05)
+#? _rec_name can be used to setup simple record name    
 
 # Date, Datetime field in DB are store as Date/Datetime not String 
 

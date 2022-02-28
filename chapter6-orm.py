@@ -35,9 +35,42 @@ P186
     #! If the last field in the path is a relational field, mapped() will return a recordset; otherwise, a Python list is returned.
 # Extending the business logic defined in a model
 SUPER() => P194 find a case to test
+    # Main
+    def calculate_book_price(self):
+        price = self.price_cn
+        print(f'?>>>>>>>>>>>>book is {price}')
+
+    # Inherit
+      
+    def calculate_book_price(self):
+        # mofify argument / context pass to implement original function (but can not overvide)
+        self.price_cn = 20
+        res = super().calculate_book_price()
+        # update result on view
+        self.price_cn = 10
+        return res
+    #! Result
+    # print => book is 20
+    # on view => price_cn field is 10
+
+
+
 
     #? Call super before do modification => res = super().fun(), return res 
     #? call super after modification  => return super().fun()
 # Extending write() and create()
+
+# self.price change from 6 to 10
+def write(self,vals):
+    print(f'Before {self.price_cn}, {vals}')
+    # Before 6, {'price_cn': 10}
+
+    res = super().write(vals)
+    
+    print(f'After {self.price_cn}, {vals}')
+    # After 10, {'price_cn': 10}
+    return res
+    
+
 
 # Customizing how records are searched
