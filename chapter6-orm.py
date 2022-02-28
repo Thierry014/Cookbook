@@ -74,3 +74,4 @@ def write(self,vals):
 
 
 # Customizing how records are searched
+read_group()
