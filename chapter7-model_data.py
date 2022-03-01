@@ -3,6 +3,8 @@ Module Data
 # Using external IDs and namespaces
 XML ID => IR.MODEL.DATA
 self.env.ref(module_name.record_id) => access XML ID
+
+
 # Loading data using XML files (manually create)
 <odoo> 
     <record id="author_pga" model="res.partner">
