@@ -17,3 +17,6 @@ DB: show on many side [Show into Book table, publish_id = 1]
 * always set up a value to a computed field
 * always use with @api.depends
 * inverse function make computed field editable, should use with store = True
+* depends won't trigger when its not a computed field
+* computed field always influenced by other field not it self
+*! comupted method run when the page rendered (all record in this model will re-calculate)

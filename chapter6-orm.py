@@ -30,7 +30,7 @@ P186
 # Filtering recordsets
     #? all_books.filter(lambda b: len(b.author_ids) > 1)
 # Traversing recordset relations
-    #? books.mapped('author_ids.name') => res,partner(1,2,3)
+    #? books.mapped('author_ids') => res,partner(1,2,3)
     #? books.mapped('name') => ['David','Henry','James']
     #! If the last field in the path is a relational field, mapped() will return a recordset; otherwise, a Python list is returned.
 # Extending the business logic defined in a model
