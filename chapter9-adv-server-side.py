@@ -26,6 +26,11 @@ record have ctx => pass to wizard and can be used to set default value for some 
 # Defining a model based on an SQL view
 
 # Adding custom settings options
+# todo 
+# implied_group in field => (optional)
+# res.conf.py, create some setting fields 
+# view => form view
+# link back to setting (menuitem => action.window) (optional)
 
 # Implementing init hooks
 hooks fun 
