@@ -20,3 +20,5 @@ DB: show on many side [Show into Book table, publish_id = 1]
 * depends won't trigger when its not a computed field
 * computed field always influenced by other field not it self
 *! comupted method run when the page rendered (all record in this model will re-calculate)
+
+# context 

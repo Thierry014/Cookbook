@@ -54,8 +54,6 @@ SUPER() => P194 find a case to test
     # on view => price_cn field is 10
 
 
-
-
     #? Call super before do modification => res = super().fun(), return res 
     #? call super after modification  => return super().fun()
 # Extending write() and create()
